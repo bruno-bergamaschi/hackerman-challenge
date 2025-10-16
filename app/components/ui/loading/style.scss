@@ -1,0 +1,35 @@
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  height: 100%;
+
+  &__spinner {
+    background: url("~/assets/img/IconeStormTrooper.png") no-repeat center;
+    height: 48px;
+    width: 48px;
+
+    animation: fadeInOut 2s infinite;
+  }
+
+  &__text {
+    font-family: "Lato";
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
