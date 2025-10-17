@@ -9,7 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "vue";
 import { useButton } from "./script";
 
 interface ButtonProps {
