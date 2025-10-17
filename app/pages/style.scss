@@ -1,0 +1,29 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 73px;
+  min-height: 100vh;
+
+  &__logo {
+    width: 410px;
+    height: 175px;
+    margin-top: 80px;
+    background-image: url("~/assets/img/LogoStarWars.png");
+  }
+
+  &__title {
+    height: 36px;
+    margin-block: 0 8px;
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 100%;
+  }
+
+  &__subtitle {
+    height: 24px;
+    margin-block: 0 24px;
+    font-size: 1.25rem;
+    line-height: 100%;
+  }
+}
