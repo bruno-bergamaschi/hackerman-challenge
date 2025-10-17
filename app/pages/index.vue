@@ -11,6 +11,7 @@
 
         <Input
           v-model="email"
+          class="content__input"
           placeholder="exemplo@email.com"
           :is-valid-value="useValidateEmail(email)"
         />
