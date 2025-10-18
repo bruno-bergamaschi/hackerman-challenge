@@ -2,7 +2,7 @@
   <div class="column">
     <input
       v-model="inputValue"
-      v-on="$attrs"
+      v-bind="$attrs"
       :class="{
         input: true,
         'input--success': isValidValue,
