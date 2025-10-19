@@ -22,7 +22,7 @@ import { watch } from "vue";
 interface Props {
   placeholder?: string;
   isValidValue?: boolean;
-  errorMessage?: string;
+  errorMessage?: string | null;
 }
 
 const { isValidValue = false } = defineProps<Props>();
