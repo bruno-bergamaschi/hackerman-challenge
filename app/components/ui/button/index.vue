@@ -3,6 +3,8 @@
     :class="['button', variantClass]"
     :disabled="isDisabled"
     v-on="$attrs"
+    :aria-label="text"
+    type="button"
   >
     {{ text }}
   </button>
