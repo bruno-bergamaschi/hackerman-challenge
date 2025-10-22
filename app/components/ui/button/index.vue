@@ -1,7 +1,7 @@
 <template>
   <button
     :class="['button', variantClass]"
-    v-on="$attrs"
+    v-bind="$attrs"
     :aria-label="text"
     type="button"
   >
@@ -14,7 +14,6 @@ import { useButton } from "./script";
 
 interface ButtonProps {
   text: string;
-  isDisabled?: boolean;
   variant?: "default";
 }
 
