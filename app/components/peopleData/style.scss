@@ -1,17 +1,23 @@
 .people-data-content {
   &__title {
-    font-size: 2rem;
-    margin-block: 0 32px;
+    font-size: 1.875rem;
+    margin-block: 0 24px;
+    font-weight: 700;
 
-    &::after {
-      content: ":";
+    >span {
+      display: block;
+      font-weight: 700;
+
+      &::after {
+        content: ":";
+      }
     }
   }
 
   &__section {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    margin-bottom: 40px;
+    gap: 8px;
+    margin-bottom: 32px;
   }
 }

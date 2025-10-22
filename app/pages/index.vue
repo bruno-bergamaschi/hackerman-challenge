@@ -1,30 +1,23 @@
 <template>
-  <ClientOnly>
-    <div class="content">
-      <div class="content__logo" />
+  <div class="content">
+    <div class="content__logo" />
 
-      <Card>
-        <h1 class="content__title">Olá!</h1>
-        <p class="content__subtitle">
-          Para começar seu teste, digite um e-mail:
-        </p>
-
-        <div class="content__input">
-          <Input
-            v-model="email"
-            placeholder="exemplo@email.com"
-            :is-valid-value="useValidateEmail(email)"
-          />
-        </div>
-
-        <Button
-          text="Próximo"
-          :is-disabled="!useValidateEmail(email)"
-          @click="navigateToSearchPage"
+    <Card title="Olá!" subtitle="Para começar seu teste, digite um e-mail">
+      <div class="content__input">
+        <Input
+          v-model="email"
+          placeholder="exemplo@email.com"
+          :is-valid-value="useValidateEmail(email)"
         />
-      </Card>
-    </div>
-  </ClientOnly>
+      </div>
+
+      <Button
+        text="Próximo"
+        :is-disabled="!useValidateEmail(email)"
+        @click="navigateToSearchPage"
+      />
+    </Card>
+  </div>
 </template>
 
 <script setup lang="ts">

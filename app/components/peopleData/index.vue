@@ -1,7 +1,7 @@
 <template>
-  <Card>
+  <Card >
     <h1 class="people-data-content__title">
-      {{ `Informações sobre ${peopleData.name}` }}
+      Informações sobre <span>{{ peopleData.name }}</span>
     </h1>
 
     <div class="people-data-content__section">

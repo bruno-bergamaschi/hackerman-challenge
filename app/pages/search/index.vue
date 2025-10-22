@@ -1,24 +1,31 @@
 <template>
   <div class="search-content">
-    <Card v-if="!isLoading && !peopleData">
-      <h1 class="search-content__title">
-        Agora, digite seu personagem favorito de Star Wars
-      </h1>
+    <Transition>
+      <Loading v-if="isLoading" class="position-absolute" />
 
-      <div class="search-content__input">
-        <Input v-model="inputValue" :error-message="errorMessage" />
-      </div>
+      <Card
+        v-else-if="!isLoading && !peopleData"
+        class="position-absolute"
+        subtitle="Agora, digite seu personagem favorito de Star Wars"
+      >
+        <div class="search-content__input">
+          <Input
+            v-model="inputValue"
+            :error-message="errorMessage"
+            :is-valid-value="isValidInputValue"
+          />
+        </div>
 
-      <Button text="Próximo" @click="fetchPeopleData" />
-    </Card>
+        <Button text="Próximo" @click="fetchPeopleData" />
+      </Card>
 
-    <Loading v-if="isLoading" />
-
-    <PeopleData
-      v-if="!isLoading && peopleData"
-      :peopleData="peopleData"
-      @search:reset="resetSearch"
-    />
+      <PeopleData
+        v-else-if="!isLoading && peopleData"
+        class="position-absolute"
+        :peopleData="peopleData"
+        @search:reset="resetSearch"
+      />
+    </Transition>
   </div>
 </template>
 
@@ -62,11 +69,26 @@ onNuxtReady(() => {
   isLoading.value = false;
 });
 
+watch(inputValue, () => {
+  if (hasFetchError.value) {
+    hasFetchError.value = false;
+  }
+});
+
+const isValidInputValue = computed(() => {
+  return !hasFetchError.value && inputValue.value.trim().length > 0;
+});
+
 async function fetchPeopleData() {
   isLoading.value = true;
   hasFetchError.value = false;
 
   try {
+    if (!isValidInputValue.value) {
+      hasFetchError.value = true;
+      return;
+    }
+
     const { count, people } = await fetchSwapiPeopleData({
       search: inputValue.value,
       useStorageData: false,

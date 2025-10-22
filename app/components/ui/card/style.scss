@@ -3,4 +3,25 @@
   padding: 24px;
   background: var(--v-background-color);
   color: var(--v-text-color);
+
+  &__title {
+    margin-block: 0 24px;
+    font-weight: 700;
+    font-size: 1.875rem;
+
+    &--with-subtitle {
+      margin-block: 0 8px;
+    }
+
+    &--colon {
+      &::after {
+        content: ":";
+      }
+    }
+  }
+
+  &__subtitle {
+    margin-block: 0 24px;
+    font-size: 1.25rem;
+  }
 }
