@@ -21,67 +21,72 @@ O objetivo é consumir a API pública **SWAPI (Star Wars API)** e exibir informa
 A estrutura foi organizada para manter separação clara entre componentes, páginas, stores e estilos:
 
 hackerman-challenge
-├── .editorconfig
-├── nuxt.config.ts
-├── package.json
-├── pnpm-lock.yaml
-├── tsconfig.json
-├── README.md
-├── types/
-│   └── nuxt.d.ts
-└── app/
-    ├── app.vue
-    ├── assets/
-    │   ├── img/
-    │   │   ├── IconeStormTrooper.png
-    │   │   ├── LogoStarWars.png
-    │   │   └── StarWarsBackground.png
-    │   └── styles/
-    │       ├── default.scss
-    │       └── variables.scss
-    ├── components/
-    │   ├── peopleData/
-    │   │   ├── index.vue
-    │   │   ├── section/
-    │   │   │   ├── index.vue
-    │   │   │   └── style.scss
-    │   │   └── style.scss
-    │   └── ui/
-    │       ├── button/
-    │       │   ├── index.vue
-    │       │   ├── script.ts
-    │       │   └── style.scss
-    │       ├── card/
-    │       │   ├── index.vue
-    │       │   └── style.scss
-    │       ├── input/
-    │       │   ├── index.vue
-    │       │   └── style.scss
-    │       ├── loading/
-    │       │   ├── index.vue
-    │       │   └── style.scss
-    │       └── tag/
-    │           ├── index.vue
-    │           └── style.scss
-    ├── composables/
-    │   ├── useClientStorage.ts
-    │   └── useValidateEmail.ts
-    ├── layouts/
-    │   └── default.vue
-    ├── middleware/
-    │   └── validate-email.ts
-    ├── pages/
-    │   ├── index.vue
-    │   ├── search/
-    │   │   ├── index.vue
-    │   │   └── style.scss
-    │   └── style.scss
-    ├── plugins/
-    │   └── swapiApi.ts
-    └── stores/
-        ├── swapiApi/
-        │   └── people.ts
-        └── userEmail.ts
+├─ .editorconfig
+├─ app
+│  ├─ app.vue
+│  ├─ assets
+│  │  ├─ img
+│  │  │  ├─ IconeStormTrooper.png
+│  │  │  ├─ LogoStarWars.png
+│  │  │  └─ StarWarsBackground.png
+│  │  └─ styles
+│  │     ├─ default.scss
+│  │     └─ variables.scss
+│  ├─ components
+│  │  ├─ pages
+│  │  │  ├─ home
+│  │  │  │  ├─ index.vue
+│  │  │  │  └─ style.scss
+│  │  │  └─ search
+│  │  │     ├─ index.vue
+│  │  │     └─ style.scss
+│  │  ├─ peopleData
+│  │  │  ├─ index.vue
+│  │  │  ├─ section
+│  │  │  │  ├─ index.vue
+│  │  │  │  └─ style.scss
+│  │  │  └─ style.scss
+│  │  └─ ui
+│  │     ├─ button
+│  │     │  ├─ index.vue
+│  │     │  ├─ script.ts
+│  │     │  └─ style.scss
+│  │     ├─ card
+│  │     │  ├─ index.vue
+│  │     │  └─ style.scss
+│  │     ├─ input
+│  │     │  ├─ index.vue
+│  │     │  └─ style.scss
+│  │     ├─ loading
+│  │     │  ├─ index.vue
+│  │     │  └─ style.scss
+│  │     └─ tag
+│  │        ├─ index.vue
+│  │        └─ style.scss
+│  ├─ composables
+│  │  ├─ useClientStorage.ts
+│  │  └─ useValidateEmail.ts
+│  ├─ layouts
+│  │  └─ default.vue
+│  ├─ middleware
+│  │  └─ validate-email.ts
+│  ├─ pages
+│  │  ├─ index.vue
+│  │  └─ search
+│  │     └─ index.vue
+│  ├─ plugins
+│  │  └─ swapiApi.ts
+│  └─ stores
+│     ├─ swapiApi
+│     │  └─ people.ts
+│     └─ userEmail.ts
+├─ nuxt.config.ts
+├─ package.json
+├─ pnpm-lock.yaml
+├─ README.md
+├─ tsconfig.json
+└─ types
+   └─ nuxt.d.ts
 ```
 
 ---
@@ -96,19 +101,22 @@ cd hackerman-challenge
 
 ```
 
-### 2️⃣ Instalar dependências
+
+### 2️⃣ Alterar a branch
 
 ```bash
-pnpm install
+git switch hackerman-challenge/bruno-bergamaschi
 
 ```
 
-### 3️⃣ Rodar o servidor de desenvolvimento
+### 3️⃣ Instalar dependências
 
 ```bash
 pnpm run dev
 
 ```
+
+### 4️⃣ Rodar o servidor de desenvolvimento
 
 A aplicação estará disponível em: 👉 http://localhost:3000
 
