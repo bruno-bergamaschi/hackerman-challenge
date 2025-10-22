@@ -5,20 +5,6 @@ O objetivo é consumir a API pública **SWAPI (Star Wars API)** e exibir informa
 
 ---
 
-✨ Funcionalidades
-
-🔍 Busca de personagens e planetas via API SWAPI
-
-📄 Exibição detalhada de informações
-
-🧩 Componentização reutilizável (Cards, Buttons, etc.)
-
-⚡ Renderização otimizada com Nuxt e Pinia
-
-🎨 Estilização modular com SCSS
-
----
-
 ## 🚀 Tecnologias Utilizadas
 
 - [Vue 3](https://vuejs.org/)
