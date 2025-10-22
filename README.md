@@ -1,7 +1,7 @@
 # Hackerman Challenge — 2na8
 
 Este projeto foi desenvolvido como parte de um processo seletivo para a **2na8**.  
-O objetivo é consumir a API pública **SWAPI (Star Wars API)** e exibir informações sobre personagens, planetas e naves, utilizando as tecnologias **Vue 3**, **Nuxt 4**, **Pinia**, **TypeScript** e **Sass (SCSS)**.
+O objetivo é consumir a API pública **SWAPI (Star Wars API)** e exibir informações sobre personagens, utilizando as tecnologias **Vue 3**, **Nuxt 4**, **Pinia**, **TypeScript** e **Sass (SCSS)**.
 
 ---
 
