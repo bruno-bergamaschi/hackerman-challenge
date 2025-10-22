@@ -13,6 +13,8 @@ O objetivo é consumir a API pública **SWAPI (Star Wars API)** e exibir informa
 - [TypeScript](https://www.typescriptlang.org/)
 - [Sass (SCSS)](https://sass-lang.com/)
 
+---
+
 ## 🧱 Estrutura do Projeto
 
 ```markdown
