@@ -29,6 +29,10 @@ O objetivo é consumir a API pública **SWAPI (Star Wars API)** e exibir informa
 
 ## 🧱 Estrutura do Projeto
 
+```markdown
+A estrutura foi organizada para manter separação clara entre componentes, páginas, stores e estilos:
+
+hackerman-challenge
 ├── .editorconfig
 ├── nuxt.config.ts
 ├── package.json
@@ -36,60 +40,61 @@ O objetivo é consumir a API pública **SWAPI (Star Wars API)** e exibir informa
 ├── tsconfig.json
 ├── README.md
 ├── types/
-│ └── nuxt.d.ts
+│   └── nuxt.d.ts
 └── app/
-├── app.vue
-├── assets/
-│ ├── img/
-│ │ ├── IconeStormTrooper.png
-│ │ ├── LogoStarWars.png
-│ │ └── StarWarsBackground.png
-│ └── styles/
-│ ├── default.scss
-│ └── variables.scss
-├── components/
-│ ├── peopleData/
-│ │ ├── index.vue
-│ │ ├── section/
-│ │ │ ├── index.vue
-│ │ │ └── style.scss
-│ │ └── style.scss
-│ └── ui/
-│ ├── button/
-│ │ ├── index.vue
-│ │ ├── script.ts
-│ │ └── style.scss
-│ ├── card/
-│ │ ├── index.vue
-│ │ └── style.scss
-│ ├── input/
-│ │ ├── index.vue
-│ │ └── style.scss
-│ ├── loading/
-│ │ ├── index.vue
-│ │ └── style.scss
-│ └── tag/
-│ ├── index.vue
-│ └── style.scss
-├── composables/
-│ ├── useClientStorage.ts
-│ └── useValidateEmail.ts
-├── layouts/
-│ └── default.vue
-├── middleware/
-│ └── validate-email.ts
-├── pages/
-│ ├── index.vue
-│ ├── search/
-│ │ ├── index.vue
-│ │ └── style.scss
-│ └── style.scss
-├── plugins/
-│ └── swapiApi.ts
-└── stores/
-├── swapiApi/
-│ └── people.ts
-└── userEmail.ts
+    ├── app.vue
+    ├── assets/
+    │   ├── img/
+    │   │   ├── IconeStormTrooper.png
+    │   │   ├── LogoStarWars.png
+    │   │   └── StarWarsBackground.png
+    │   └── styles/
+    │       ├── default.scss
+    │       └── variables.scss
+    ├── components/
+    │   ├── peopleData/
+    │   │   ├── index.vue
+    │   │   ├── section/
+    │   │   │   ├── index.vue
+    │   │   │   └── style.scss
+    │   │   └── style.scss
+    │   └── ui/
+    │       ├── button/
+    │       │   ├── index.vue
+    │       │   ├── script.ts
+    │       │   └── style.scss
+    │       ├── card/
+    │       │   ├── index.vue
+    │       │   └── style.scss
+    │       ├── input/
+    │       │   ├── index.vue
+    │       │   └── style.scss
+    │       ├── loading/
+    │       │   ├── index.vue
+    │       │   └── style.scss
+    │       └── tag/
+    │           ├── index.vue
+    │           └── style.scss
+    ├── composables/
+    │   ├── useClientStorage.ts
+    │   └── useValidateEmail.ts
+    ├── layouts/
+    │   └── default.vue
+    ├── middleware/
+    │   └── validate-email.ts
+    ├── pages/
+    │   ├── index.vue
+    │   ├── search/
+    │   │   ├── index.vue
+    │   │   └── style.scss
+    │   └── style.scss
+    ├── plugins/
+    │   └── swapiApi.ts
+    └── stores/
+        ├── swapiApi/
+        │   └── people.ts
+        └── userEmail.ts
+```
 
 ---
 
@@ -118,3 +123,15 @@ pnpm run dev
 ```
 
 A aplicação estará disponível em: 👉 http://localhost:3000
+
+---
+
+## 🔐 Variáveis de Ambiente
+
+O projeto utiliza variáveis de ambiente.
+
+Crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo:
+
+```bash
+SWAPI_API_URL=https://swapi.dev/api
+```
