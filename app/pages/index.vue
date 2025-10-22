@@ -13,7 +13,7 @@
 
       <Button
         text="Próximo"
-        :is-disabled="!useValidateEmail(email)"
+        :disabled="!useValidateEmail(email)"
         @click="navigateToSearchPage"
       />
     </Card>
