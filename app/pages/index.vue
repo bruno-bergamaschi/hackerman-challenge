@@ -9,12 +9,13 @@
           Para começar seu teste, digite um e-mail:
         </p>
 
-        <Input
-          v-model="email"
-          class="content__input"
-          placeholder="exemplo@email.com"
-          :is-valid-value="useValidateEmail(email)"
-        />
+        <div class="content__input">
+          <Input
+            v-model="email"
+            placeholder="exemplo@email.com"
+            :is-valid-value="useValidateEmail(email)"
+          />
+        </div>
 
         <Button
           text="Próximo"
