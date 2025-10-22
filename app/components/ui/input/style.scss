@@ -1,0 +1,50 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input {
+  width: 100%;
+  height: 32px;
+  border: 1px solid var(--v-enable-color);
+  border-radius: 8px;
+  padding: 8px;
+  color: var(--v-text-color);
+  background: var(--v-background-color);
+
+  &:focus {
+    outline: none;
+    border-color: var(--v-primary-color);
+  }
+
+  &::placeholder {
+    font-size: 1rem;
+    line-height: 100%;
+    opacity: 0.3;
+  }
+
+  &--error {
+    border-color: var(--v-error-color);
+
+    &:focus {
+      border-color: var(--v-error-color);
+    }
+  }
+
+  &--success {
+    border-color: var(--v-success-color);
+
+    &:focus {
+      border-color: var(--v-success-color);
+    }
+  }
+}
+
+.error-message {
+  font-size: 0.875rem;
+  line-height: 100%;
+  margin-top: 8px;
+  margin-bottom: 0;
+  color: var(--v-error-color);
+}

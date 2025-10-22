@@ -1,0 +1,14 @@
+.tag {
+  color: var(--v-tag-card-text-color);
+  padding: 0 8px;
+  border-radius: 4px;
+  background: var(--v-tag-card-background-color);
+  display: inline-block;
+  line-height: 28px;
+
+  &--empty {
+    background: none;
+    border: 1px solid var(--v-empty-state-border-color);
+    color: var(--v-empty-state-color);
+  }
+}

@@ -1,0 +1,21 @@
+.section-content {
+  font-weight: 400;
+  font-size: 1rem;
+
+  &__title {
+    font-size: 1.25rem;
+    line-height: 100%;
+    margin-block: 0 8px;
+
+    &::after {
+      content: ":";
+    }
+  }
+
+  &__tags {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}

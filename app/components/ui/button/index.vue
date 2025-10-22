@@ -1,0 +1,27 @@
+<template>
+  <button
+    :class="['button', variantClass]"
+    :disabled="isDisabled"
+    v-on="$attrs"
+    :aria-label="text"
+    type="button"
+  >
+    {{ text }}
+  </button>
+</template>
+
+<script setup lang="ts">
+import { useButton } from "./script";
+
+interface ButtonProps {
+  text: string;
+  isDisabled?: boolean;
+  variant?: "default";
+}
+
+const { variant = "default" } = defineProps<ButtonProps>();
+
+const { variantClass } = useButton({ variant });
+</script>
+
+<style scoped lang="scss" src="./style.scss" />
