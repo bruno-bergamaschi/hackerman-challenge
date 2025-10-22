@@ -1,5 +1,5 @@
 export function useValidateEmail(email: string) {
-  if (!email.includes("@")) {
+  if (!email.includes("@") || email.startsWith("@") || email.includes(" ")) {
     return false;
   }
 
