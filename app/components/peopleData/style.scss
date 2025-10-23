@@ -1,10 +1,15 @@
 .people-data-content {
+  @media screen and (max-height: 700px) {
+    max-height: 50dvh;
+    overflow-y: auto;
+  }
+
   &__title {
     font-size: 1.875rem;
     margin-block: 0 24px;
     font-weight: 700;
 
-    >span {
+    > span {
       display: block;
       font-weight: 700;
 

@@ -1,17 +1,19 @@
 <template>
-  <Card >
+  <Card>
     <h1 class="people-data-content__title">
       Informações sobre <span>{{ peopleData.name }}</span>
     </h1>
 
-    <div class="people-data-content__section">
-      <Section
-        v-for="section in sections"
-        :key="section.label"
-        :title="section.label"
-        :entity="section.value"
-        :property="section.property"
-      />
+    <div class="people-data-content">
+      <div class="people-data-content__section">
+        <Section
+          v-for="section in sections"
+          :key="section.label"
+          :title="section.label"
+          :entity="section.value"
+          :property="section.property"
+        />
+      </div>
     </div>
 
     <Button text="Pesquisar Novamente" @click="handleResetSearch" />

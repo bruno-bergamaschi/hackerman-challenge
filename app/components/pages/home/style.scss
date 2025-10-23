@@ -3,13 +3,12 @@
   flex-direction: column;
   align-items: center;
   gap: 73px;
-  min-height: 100vh;
 
   &__logo {
-    width: 410px;
+    width: 90%;
     height: 175px;
     margin-top: 80px;
-    background-image: url("~/assets/img/LogoStarWars.png");
+    background: url("~/assets/img/LogoStarWars.png") no-repeat center/contain;
   }
 
   &__input {
